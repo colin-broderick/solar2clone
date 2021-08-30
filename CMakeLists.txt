@@ -7,5 +7,6 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY build)
 project(solarclone)
 add_executable(${PROJECT_NAME})
 
-target_sources(${PROJECT_NAME} PUBLIC src/main.cpp src/entity.cpp)
+target_sources(${PROJECT_NAME} PUBLIC src/main.cpp src/game.cpp src/entity.cpp src/body.cpp src/asteroid.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-system sfml-window)
